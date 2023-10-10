@@ -12,7 +12,7 @@ const Header = () => {
       <StyledHeader>
         <StyledContainer>
           <StyledImageLink to={path.root} />
-          <StyledMenuWrapper isOpened={isOpened}>
+          <StyledMenuWrapper $isOpened={isOpened}>
             <StyledLink to={path.teahyeong}>태형</StyledLink>
             <StyledLink to={path.soyeon}>소연</StyledLink>
             <StyledLink to={path.choonghyeon}>충현</StyledLink>
@@ -49,8 +49,8 @@ const StyledMenuWrapper = styled.div`
   font-size: 12px;
   transition: all 0.5s;
   @media screen and (max-width: 834px) {
-    ${({ isOpened }) => {
-      return isOpened
+    ${({ $isOpened }) => {
+      return $isOpened
         ? css`
             opacity: 1;
             pointer-events: auto;
