@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainPage from "./main/MainPage";
 import Layout from "../components/Layout";
-import About from "./soyoun/About"
+import Scheduler from "./soyoun/Scheduler"
 export const path = {
   root: "/",
   teahyeong: "/teahyeong",
-  soyeon: "/about",
+  soyoun: "/scheduler",
   choonghyeon: "/choonghyeon",
   minseong: "/minseong",
 };
@@ -20,8 +20,8 @@ export const router = createBrowserRouter([
         element: <MainPage />,
       },
       {
-        path: path.soyeon,
-        element: <About />,
+        path: path.soyoun,
+        element: <Scheduler />,
       },
     ],
   },
