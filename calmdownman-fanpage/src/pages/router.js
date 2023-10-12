@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainPage from "./main/MainPage";
 import Layout from "../components/Layout";
-import Video from "./minseong/Vidoe";
+import Video from "./minseong/pages/Video";
 export const path = {
   root: "/",
   teahyeong: "/teahyeong",
