@@ -20,12 +20,12 @@ const GuestSmall = styled.div`
   justify-content: center;
   align-items: center;
   margin: 20px 20px;
-  &:hover {
-    background-color: green;
-    width: 110px;
-    height: 110px;
-    border-radius: 120px;
-    transition: 0.5s;
+  // &:hover {
+  //   background-color: green;
+  //   width: 110px;
+  //   height: 110px;
+  //   border-radius: 120px;
+  //   transition: 0.5s;
   }
 `;
 

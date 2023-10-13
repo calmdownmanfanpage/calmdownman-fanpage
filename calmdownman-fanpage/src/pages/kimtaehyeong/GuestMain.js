@@ -2,6 +2,7 @@ import { GuestAll, GuestSmall, GuestLarge } from "./GuestWindow";
 import React, { useState } from "react";
 
 const GuestMain = () => {
+  const [GuestSmall, GuestLarge] = useState(false);
   return (
     <div>
       <div>게스트관계도 메인페이지입니다.</div>
@@ -19,24 +20,24 @@ const GuestMain = () => {
   );
 };
 
-const CourseHover = () => {
-  const [GuestSmall, GuestLarge] = useState(false);
+// const CourseHover = () => {
+//   const [GuestSmall, GuestLarge] = useState(false);
 
-  const handleMouseOver = () => {
-    GuestLarge(true);
-  };
+//   const handleMouseOver = () => {
+//     GuestLarge(true);
+//   };
 
-  const handleMouseOut = () => {
-    GuestLarge(false);
-  };
-  return (
-    <div>
-      <GuestSmall>
-        onMouseOver={handleMouseOver}
-        onMouseOut={handleMouseOut}
-      </GuestSmall>
-    </div>
-  );
-};
+//   const handleMouseOut = () => {
+//     GuestLarge(false);
+//   };
+//   return (
+//     <div>
+//       <GuestSmall>
+//         onMouseOver={handleMouseOver}
+//         onMouseOut={handleMouseOut}
+//       </GuestSmall>
+//     </div>
+//   );
+// };
 
 export default GuestMain;
