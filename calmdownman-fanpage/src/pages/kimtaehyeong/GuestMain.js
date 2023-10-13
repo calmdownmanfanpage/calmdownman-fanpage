@@ -1,4 +1,5 @@
-import { GuestAll, GuestSmall } from "./GuestWindow";
+import { GuestAll, GuestSmall, GuestLarge } from "./GuestWindow";
+import React, { useState } from "react";
 
 const GuestMain = () => {
   return (
@@ -14,6 +15,26 @@ const GuestMain = () => {
         <GuestSmall>곽튜브</GuestSmall>
         <GuestSmall>박정민</GuestSmall>
       </GuestAll>
+    </div>
+  );
+};
+
+const CourseHover = () => {
+  const [GuestSmall, GuestLarge] = useState(false);
+
+  const handleMouseOver = () => {
+    GuestLarge(true);
+  };
+
+  const handleMouseOut = () => {
+    GuestLarge(false);
+  };
+  return (
+    <div>
+      <GuestSmall>
+        onMouseOver={handleMouseOver}
+        onMouseOut={handleMouseOut}
+      </GuestSmall>
     </div>
   );
 };

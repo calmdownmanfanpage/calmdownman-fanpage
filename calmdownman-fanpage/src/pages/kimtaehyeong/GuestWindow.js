@@ -29,4 +29,12 @@ const GuestSmall = styled.div`
   }
 `;
 
-export { GuestAll, GuestSmall };
+const GuestLarge = styled.div`
+  background-color: green;
+  width: 110px;
+  height: 110px;
+  border-radius: 120px;
+  transition: 0.5s;
+`;
+
+export { GuestAll, GuestSmall, GuestLarge };
