@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import MainPage from "./main/MainPage";
 import Layout from "../components/Layout";
 import Scheduler from "./soyoun/Scheduler"
+import { DemoApp } from "./soyoun/FullCalendarTest";
 export const path = {
   root: "/",
   teahyeong: "/teahyeong",
@@ -21,7 +22,7 @@ export const router = createBrowserRouter([
       },
       {
         path: path.soyoun,
-        element: <Scheduler />,
+        element: <DemoApp />,
       },
     ],
   },
