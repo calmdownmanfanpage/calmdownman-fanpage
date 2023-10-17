@@ -12,7 +12,7 @@ export const getChannelInfo = () => {
 export const getVideoList = () => {
   return axios
     .get(
-      `${BASE_VIDEO_URL}part=snippet&maxResults=25&channelId=${CHANNEL_ID}&type=video&order=date&key=${API_KEY}`
+      `${BASE_VIDEO_URL}part=snippet&maxResults=20&channelId=${CHANNEL_ID}&type=video&order=date&key=${API_KEY}`
     )
     .then((response) => response.data);
 };
