@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
-import FullCalendar from '@fullcalendar/react'
-import dayGridPlugin from '@fullcalendar/daygrid'
+import FullCalendar from '@fullcalendar/react';
+import dayGridPlugin from '@fullcalendar/daygrid';
+
 
 const events = [
   { title: 'Meeting', start: new Date() }
@@ -10,9 +11,9 @@ export function DemoApp() {
   return <>
     <Wrapper>
             <Header>
-                <TextWrap>
-                <h2>CalmDownMan Official Schedule</h2>
-                </TextWrap>
+                  <BannerWrap>
+                    
+                  </BannerWrap>
             </Header>
 
             <Container>
@@ -55,19 +56,13 @@ const Header = styled.div`
     justify-content: center;
 `
 
-const TextWrap = styled.div`
-    text-align: center;
-    font-family: "Dokdo";
-    color : white;
-    font-size: 50px;
-    display: flex;
-    align-items: center;
+const BannerWrap = styled.div`
+    background-image: url('../../img/scheduleBanner.png');
 `
 
 const Container = styled.div`
     width: 100%;
     display: grid;
-    
 `
 
 const CalendarArea = styled.div`
