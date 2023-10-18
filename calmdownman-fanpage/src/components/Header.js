@@ -14,7 +14,7 @@ const Header = () => {
           <StyledImageLink to={path.root} />
           <StyledMenuWrapper $isOpened={isOpened}>
             <StyledLink to={path.teahyeong}>태형</StyledLink>
-            <StyledLink to={path.soyeon}>소연</StyledLink>
+            <StyledLink to={path.soyoun}>Scheduler</StyledLink>
             <StyledLink to={path.choonghyeon}>충현</StyledLink>
             <StyledLink to={path.video}>영상</StyledLink>
           </StyledMenuWrapper>

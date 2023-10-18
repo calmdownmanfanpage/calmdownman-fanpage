@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainPage from "./main/MainPage";
 import Layout from "../components/Layout";
+import Scheduler from "./soyoun/Scheduler";
 import GuestMain from "./kimtaehyeong/GuestMain";
 import Video from "./minseong/pages/Video";
 import VideoItem from "./minseong/componenets/VideoItem";
@@ -8,7 +9,7 @@ import VideoItem from "./minseong/componenets/VideoItem";
 export const path = {
   root: "/",
   teahyeong: "/guest",
-  soyeon: "/soyeon",
+  soyoun: "/scheduler",
   choonghyeon: "/choonghyeon",
   video: "/video",
   videoItem: "/video/:videoId",
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: path.root,
         element: <MainPage />,
+      },
+      {
+        path: path.soyoun,
+        element: <Scheduler />,
       },
       {
         path: path.teahyeong,
