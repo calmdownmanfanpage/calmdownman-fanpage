@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainPage from "./main/MainPage";
 import Layout from "../components/Layout";
-import History from "./main/choonghyun/History";
+import History from "./choonghyun/History";
 import Scheduler from "./soyoun/Scheduler";
 import GuestMain from "./kimtaehyeong/GuestMain";
 import Video from "./minseong/pages/Video";
