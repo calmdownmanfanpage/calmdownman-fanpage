@@ -16,7 +16,7 @@ const Header = () => {
             <StyledLink to={path.teahyeong}>태형</StyledLink>
             <StyledLink to={path.soyoun}>Scheduler</StyledLink>
             <StyledLink to={path.choonghyeon}>충현</StyledLink>
-            <StyledLink to={path.minseong}>민성</StyledLink>
+            <StyledLink to={path.video}>영상</StyledLink>
           </StyledMenuWrapper>
           <StyledMenuButton onClick={handleOpenMenu} />
         </StyledContainer>
