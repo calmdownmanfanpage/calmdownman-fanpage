@@ -6,6 +6,7 @@ const ChannelContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-right: 50px;
 `;
 
 const ChannelIconWrapper = styled.div`
