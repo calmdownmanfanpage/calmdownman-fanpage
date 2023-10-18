@@ -8,7 +8,15 @@ const GuestAll = styled.div`
   margin: 30px;
 `;
 
-const GuestSmall = styled.div`
+const ClubAll = styled.div`
+  background-color: lightgreen;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 30px;
+`;
+
+const ClubAfter = styled.div`
   background-color: blue;
   color: white;
   font-size: 20px;
@@ -20,21 +28,6 @@ const GuestSmall = styled.div`
   justify-content: center;
   align-items: center;
   margin: 20px 20px;
-  // &:hover {
-  //   background-color: green;
-  //   width: 110px;
-  //   height: 110px;
-  //   border-radius: 120px;
-  //   transition: 0.5s;
-  }
 `;
 
-const GuestLarge = styled.div`
-  background-color: green;
-  width: 110px;
-  height: 110px;
-  border-radius: 120px;
-  transition: 0.5s;
-`;
-
-export { GuestAll, GuestSmall, GuestLarge };
+export { GuestAll, ClubAll, ClubAfter };

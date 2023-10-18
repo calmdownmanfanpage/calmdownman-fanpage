@@ -1,43 +1,26 @@
-import { GuestAll, GuestSmall, GuestLarge } from "./GuestWindow";
+import { GuestAll, ClubAll, ClubAfter } from "./GuestWindow";
 import React, { useState } from "react";
+import styled, { css } from "styled-components";
 
-const GuestMain = () => {
-  const [GuestSmall, GuestLarge] = useState(false);
+function GuestMain() {
+  const [content, setContent] = useState();
+
+  const handleClick = (e) => {
+    const { name } = e.target;
+    setContent(name);
+  };
+
+  const selectComponent = {
+    first: "1",
+    second: "2",
+    third: "3",
+  };
+  console.log(ClubAfter);
   return (
-    <div>
-      <div>게스트관계도 메인페이지입니다.</div>
-      <GuestAll>
-        <GuestSmall>궤도</GuestSmall>
-        <GuestSmall>곽민수</GuestSmall>
-        <GuestSmall>통닭천사</GuestSmall>
-        <GuestSmall>매직박</GuestSmall>
-        <GuestSmall>김풍</GuestSmall>
-        <GuestSmall>주우재</GuestSmall>
-        <GuestSmall>곽튜브</GuestSmall>
-        <GuestSmall>박정민</GuestSmall>
-      </GuestAll>
-    </div>
+    <>
+      <ClubAfter onClick={handleClick}>연습</ClubAfter>
+    </>
   );
-};
-
-// const CourseHover = () => {
-//   const [GuestSmall, GuestLarge] = useState(false);
-
-//   const handleMouseOver = () => {
-//     GuestLarge(true);
-//   };
-
-//   const handleMouseOut = () => {
-//     GuestLarge(false);
-//   };
-//   return (
-//     <div>
-//       <GuestSmall>
-//         onMouseOver={handleMouseOver}
-//         onMouseOut={handleMouseOut}
-//       </GuestSmall>
-//     </div>
-//   );
-// };
+}
 
 export default GuestMain;
