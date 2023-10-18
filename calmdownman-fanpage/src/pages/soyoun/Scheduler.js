@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components";
 import Bg from "./img/bg.png";
-// import Insta from "./img/insta.png";
-// import Twitch from "./img/twitch.png";
-// import Youtube from "./img/Youtube.png";
-// import Mail from "./img/mail.png";
+import Insta from "./img/insta.png";
+import Twitch from "./img/twitch.png";
+import Youtube from "./img/youtube.png";
+import Mail from "./img/mail.png";
 import Calendar from "./Calendar";
 
 const Scheduler = () => {
@@ -23,21 +23,51 @@ const Scheduler = () => {
               <ul>
                 <li>
                     침착맨 생방송
-                    <div></div>
-                    <div></div>
+                    <div>
+                        <img
+                            src={Twitch}
+                            alt="유튜브로고"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src={Youtube}
+                            alt="유튜브로고"
+                        />
+                    </div>
                 </li>
                 <li>
                     침착맨 유튜브
-                    <div></div>
-                    <div></div>
+                    <div>
+                        <img
+                            src={Youtube}
+                            alt="유튜브로고"
+                        />
+                    </div>
+                    <div>
+                        <img
+                            src={Youtube}
+                            alt="유튜브로고"
+                        />
+                    </div>
                 </li>
                 <li>
                     침착맨 인스타
-                    <div></div>
+                    <div>
+                        <img
+                            src={Insta}
+                            alt="유튜브로고"
+                        />
+                    </div>
                 </li>
                 <li>
                     비즈니스 문의
-                    <div></div>
+                    <div>
+                        <img
+                            src={Mail}
+                            alt="유튜브로고"
+                        />
+                    </div>
                 </li>
               </ul>
             </Linklist>
@@ -106,16 +136,23 @@ const Linklist = styled.div`
             flex-direction: column;
         }
 
-    } li{
+    } 
+    li{
         font-size: 30px;
         font-family: Yeon Sung;
         width: 50%;
-        height: 100px;
-        background-color: aliceblue;
+        padding: 10px 10px;
         @media screen and (min-width: 834px) {
             width: 100%;
             
         }
+    }
+    div{
+        display: inline-block;
+        width: 50px;
+    }
+    img{
+        width: 100%;
     }
 `;
 
