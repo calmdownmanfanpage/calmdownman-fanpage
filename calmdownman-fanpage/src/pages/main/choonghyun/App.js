@@ -1,37 +1,37 @@
-import React, { useRef,useState} from 'react';
-import {Swiper, SwiperSlide} from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination'
-import './styles.css'
-import {EffectCoverflow, Pagination}from "swiper/modules";
+import 'swiper/css/effect-cards';
 
-export default function App(){
-    return(
-        <>
-        <Swiper
-        effect={'coverflow'}
+import './styles.css';
+
+import { EffectCards } from 'swiper/modules';
+
+import Webtoon from './Webtoon';
+import Webtoon2 from './Webtoon2';
+import Webtoon3 from './Webtoon3';
+import Webtoon4 from './Webtoon4';
+import Webtoon5 from './Webtoon5';
+
+export default function App() {
+  return (
+    <>
+      <Swiper
+        effect={'cards'}
         grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={'auto'}
-        coverflowEffect={{
-            rotate : 50,
-            stretch : 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-        }}
-        pagination={ture}
-        modules={[EffectCoverflow, Pagination]}
+        modules={[EffectCards]}
         className="mySwiper"
-        >
+        loop={true}
+      >
 
-            <SwiperSlide><img src="./choonghyun/img/ham.png"/></SwiperSlide>
+        <SwiperSlide><Webtoon/></SwiperSlide>
+        <SwiperSlide><Webtoon2/></SwiperSlide>
+        <SwiperSlide><Webtoon3/></SwiperSlide>
+        <SwiperSlide><Webtoon4/></SwiperSlide>
+        <SwiperSlide><Webtoon5/></SwiperSlide>
 
-            
-        </Swiper>
-        </>
 
-
-    ); 
-};
+      </Swiper>
+    </>
+  );
+}
