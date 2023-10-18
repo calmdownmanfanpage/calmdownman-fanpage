@@ -1,17 +1,20 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { getVideoList } from "../lib/api";
-import VideoItem from "./VideoItem";
+import VideoItems from "./VideoItems";
 
 const VideoListContainer = styled.div`
   width: 100%;
   margin: 0 auto;
   margin-top: 30px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20%, auto));
+  grid-gap: 10px;
+  padding: 10px;
+  grid-template-columns: repeat(5, 1fr);
+  background-color: #ecf0f1;
 `;
 
-const VideoList = () => {
+const VideosContainer = () => {
   const [videoList, setVideoList] = useState([]);
 
   useEffect(() => {
@@ -30,11 +33,11 @@ const VideoList = () => {
     <>
       <VideoListContainer>
         {videoList.map((item, index) => (
-          <VideoItem info={item} key={index} />
+          <VideoItems info={item} key={index} />
         ))}
       </VideoListContainer>
     </>
   );
 };
 
-export default VideoList;
+export default VideosContainer;

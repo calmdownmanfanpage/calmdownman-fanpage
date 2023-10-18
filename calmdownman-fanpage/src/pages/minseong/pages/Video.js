@@ -1,11 +1,11 @@
 import Channel from "../componenets/Channel";
-import VideoList from "../componenets/VideoList";
+import VideosContainer from "../componenets/VideosContainer";
 
 const Video = () => {
   return (
     <>
       <Channel />
-      <VideoList />
+      <VideosContainer />
     </>
   );
 };
