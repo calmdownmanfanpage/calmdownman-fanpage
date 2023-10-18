@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { router } from "./pages/router.js";
 import { RouterProvider } from "react-router-dom";
 import GlobalStyle from "./styles/globalStyle.js";
-import "./pages/main/choonghyun/font/Font.css"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

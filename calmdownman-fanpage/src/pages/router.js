@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainPage from "./main/MainPage";
 import Layout from "../components/Layout";
-import History from "./choonghyun/History";
 import Scheduler from "./soyoun/Scheduler";
 import GuestMain from "./kimtaehyeong/GuestMain";
 import Video from "./minseong/pages/Video";
@@ -24,11 +23,6 @@ export const router = createBrowserRouter([
       {
         path: path.root,
         element: <MainPage />,
-      },
-
-      {
-        path: path.choonghyun,
-        element: <History />,
       },
       {
         path: path.soyoun,
