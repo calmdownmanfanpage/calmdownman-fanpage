@@ -1,9 +1,12 @@
+import { Link } from 'react-router-dom'
 import styled, { css } from "styled-components";
 import Bg from "./img/bg.png";
 import Insta from "./img/insta.png";
 import Twitch from "./img/twitch.png";
 import Youtube from "./img/youtube.png";
-import Mail from "./img/mail.png";
+import YoutubeLogo from "./img/youtubeLogo.png";
+import PlusLogo from "./img/plusLogo.png";
+import OriginalLogo from "./img/originalLogo.png";
 import Calendar from "./Calendar";
 
 const Scheduler = () => {
@@ -22,51 +25,63 @@ const Scheduler = () => {
             <Linklist>
               <ul>
                 <li>
-                    침착맨 생방송
+                    <span>침착맨 생방송</span>
                     <div>
+                      <Link to="https://www.twitch.tv/zilioner">
                         <img
                             src={Twitch}
                             alt="유튜브로고"
                         />
-                    </div>
-                    <div>
-                        <img
-                            src={Youtube}
-                            alt="유튜브로고"
-                        />
+                      </Link>
                     </div>
                 </li>
                 <li>
-                    침착맨 유튜브
+                <span>침착맨 유튜브</span>
                     <div>
+                    <Link to="https://www.youtube.com/@ChimChakMan_Official/featured">
                         <img
-                            src={Youtube}
+                            src={YoutubeLogo}
                             alt="유튜브로고"
                         />
+                      </Link>
                     </div>
                     <div>
+                    <Link to="https://www.youtube.com/@ChimChakMan_Plus">
                         <img
-                            src={Youtube}
+                            src={PlusLogo}
                             alt="유튜브로고"
                         />
+                      </Link>
+                    </div>
+                    <div>
+                    <Link to="https://www.yhttps://www.youtube.com/@ChimChakMan_Dataoutube.com/@ChimChakMan_Plus">
+                        <img
+                            src={OriginalLogo}
+                            alt="유튜브로고"
+                        />
+                      </Link>
                     </div>
                 </li>
                 <li>
-                    침착맨 인스타
+                <span>침착맨 인스타</span>
                     <div>
+                      <Link to="https://www.instagram.com/dangerousmanleebyeonggeon/">
                         <img
                             src={Insta}
                             alt="유튜브로고"
                         />
+                        </Link>
                     </div>
                 </li>
                 <li>
-                    비즈니스 문의
+                <span>참하하</span>
                     <div>
+                      <Link to="https://chimhaha.net/">
                         <img
-                            src={Mail}
+                            src={Insta}
                             alt="유튜브로고"
                         />
+                      </Link>
                     </div>
                 </li>
               </ul>
@@ -135,21 +150,30 @@ const Linklist = styled.div`
         @media screen and (min-width: 834px) {
             flex-direction: column;
         }
-
     } 
     li{
         font-size: 30px;
         font-family: Yeon Sung;
         width: 50%;
         padding: 10px 10px;
-        @media screen and (min-width: 834px) {
-            width: 100%;
-            
+        text-align: center;
+        & + li{
         }
+        @media screen and (min-width: 834px) {
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+    span{
+      display: block;
+      & + div {
+        padding-top: 20px;
+      }
     }
     div{
         display: inline-block;
         width: 50px;
+        margin-right: 20px;
     }
     img{
         width: 100%;
