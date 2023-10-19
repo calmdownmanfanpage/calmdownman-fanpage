@@ -3,7 +3,6 @@ import styled, { css } from "styled-components";
 import Bg from "./img/bg.png";
 import Insta from "./img/insta.png";
 import Twitch from "./img/twitch.png";
-import Youtube from "./img/youtube.png";
 import YoutubeLogo from "./img/youtubeLogo.png";
 import PlusLogo from "./img/plusLogo.png";
 import OriginalLogo from "./img/originalLogo.png";
