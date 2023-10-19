@@ -3,6 +3,11 @@ import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
     ${reset}
+    body{
+        width: 100vw;
+        height: 100vh;
+        overflow-x: hidden;
+    }
     a{
         text-decoration: none;
         color: inherit;
