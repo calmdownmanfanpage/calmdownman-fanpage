@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+// import styled, { css } from "styled-components";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 
@@ -10,7 +10,7 @@ function Calendar() {
         <FullCalendar
           plugins={[dayGridPlugin]}
           initialView="dayGridMonth"
-          // weekends={false}
+          weekends={true}
           events={[
           { 
             title: "2주차 불침번", 

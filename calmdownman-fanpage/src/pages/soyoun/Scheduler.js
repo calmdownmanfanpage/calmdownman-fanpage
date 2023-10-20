@@ -6,6 +6,7 @@ import Twitch from "./img/twitch.png";
 import YoutubeLogo from "./img/youtubeLogo.png";
 import PlusLogo from "./img/plusLogo.png";
 import OriginalLogo from "./img/originalLogo.png";
+import CafeLogo from "./img/cafeLogo.png";
 import Calendar from "./Calendar";
 
 const Scheduler = () => {
@@ -24,64 +25,64 @@ const Scheduler = () => {
             <Linklist>
               <ul>
                 <li>
-                    <span>침착맨 생방송</span>
-                    <div>
-                      <Link to="https://www.twitch.tv/zilioner">
-                        <img
-                            src={Twitch}
-                            alt="유튜브로고"
-                        />
-                      </Link>
-                    </div>
+                  <span>침착맨 생방송</span>
+                  <div>
+                    <Link to="https://www.twitch.tv/zilioner">
+                      <img
+                          src={Twitch}
+                          alt="트위치생방송로고"
+                      />
+                    </Link>
+                  </div>
                 </li>
                 <li>
-                <span>침착맨 유튜브</span>
-                    <div>
-                    <Link to="https://www.youtube.com/@ChimChakMan_Official/featured">
-                        <img
-                            src={YoutubeLogo}
-                            alt="유튜브로고"
-                        />
-                      </Link>
-                    </div>
-                    <div>
-                    <Link to="https://www.youtube.com/@ChimChakMan_Plus">
-                        <img
-                            src={PlusLogo}
-                            alt="유튜브로고"
-                        />
-                      </Link>
-                    </div>
-                    <div>
-                    <Link to="https://www.yhttps://www.youtube.com/@ChimChakMan_Dataoutube.com/@ChimChakMan_Plus">
-                        <img
-                            src={OriginalLogo}
-                            alt="유튜브로고"
-                        />
-                      </Link>
-                    </div>
+                  <span>침착맨 유튜브</span>
+                  <div>
+                  <Link to="https://www.youtube.com/@ChimChakMan_Official/featured">
+                      <img
+                          src={YoutubeLogo}
+                          alt="유튜브로고"
+                      />
+                    </Link>
+                  </div>
+                  <div>
+                  <Link to="https://www.youtube.com/@ChimChakMan_Plus">
+                      <img
+                          src={PlusLogo}
+                          alt="유튜브쇼츠로고"
+                      />
+                    </Link>
+                  </div>
+                  <div>
+                  <Link to="https://www.yhttps://www.youtube.com/@ChimChakMan_Dataoutube.com/@ChimChakMan_Plus">
+                      <img
+                          src={OriginalLogo}
+                          alt="원본박물관로고"
+                      />
+                    </Link>
+                  </div>
                 </li>
                 <li>
-                <span>침착맨 인스타</span>
-                    <div>
-                      <Link to="https://www.instagram.com/dangerousmanleebyeonggeon/">
-                        <img
-                            src={Insta}
-                            alt="유튜브로고"
-                        />
-                        </Link>
-                    </div>
+                  <span>침착맨 인스타</span>
+                  <div>
+                    <Link to="https://www.instagram.com/dangerousmanleebyeonggeon/">
+                      <img
+                          src={Insta}
+                          alt="인스타그램로고"
+                      />
+                      </Link>
+                  </div>
                 </li>
                 <li>
-                <span>참하하</span>
-                    <div>
-                      <Link to="https://chimhaha.net/">
-                        <img
-                            src={Insta}
-                            alt="유튜브로고"
-                        />
-                      </Link>
-                    </div>
+                  <span>참하하</span>
+                  <div>
+                    <Link to="https://chimhaha.net/">
+                      <img
+                          src={CafeLogo}
+                          alt="침하하카페로고"
+                      />
+                    </Link>
+                  </div>
                 </li>
               </ul>
             </Linklist>
