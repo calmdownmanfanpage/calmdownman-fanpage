@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import styled from "styled-components";
+import CommentsContainer from "./CommentsContainer";
 
 const VideoItem = () => {
   const { videoId } = useParams();
@@ -12,8 +13,8 @@ const VideoItem = () => {
     justify-content: center;
   `;
   const StyledIframe = styled.iframe`
-    width: 1024px;
-    height: 600px;
+    width: 640px;
+    height: 360px;
     border-radius: 20px;
   `;
   return (
@@ -24,6 +25,8 @@ const VideoItem = () => {
           src={`https://www.youtube.com/embed/${videoId}?showinfo=0&enablejsapi=1&origin=http://localhost:3000`}
         />
       </StyledWrapper>
+
+      <CommentsContainer videoId={videoId} />
     </>
   );
 };
