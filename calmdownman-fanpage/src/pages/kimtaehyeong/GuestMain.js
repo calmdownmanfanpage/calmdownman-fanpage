@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import styled, { css } from "styled-components";
-import GuestWindow from "./GuestWindow";
-import Course from "./GuestWiki/Course";
+import GuestWindow from "./Mainpage/GuestWindow";
 
 const GuestMain = () => {
   return (

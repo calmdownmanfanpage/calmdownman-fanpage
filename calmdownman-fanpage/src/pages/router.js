@@ -3,14 +3,12 @@ import MainPage from "./main/MainPage";
 import Layout from "../components/Layout";
 import Scheduler from "./soyoun/Scheduler";
 import GuestMain from "./kimtaehyeong/GuestMain";
-import Course from "./kimtaehyeong/GuestWiki/Course";
 import Video from "./minseong/pages/Video";
 import VideoItem from "./minseong/componenets/VideoItem";
 
 export const path = {
   root: "/",
   teahyeong: "/guest",
-  wiki: "/guest/guestwiki",
   soyoun: "/scheduler",
   choonghyun: "/history",
   video: "/video",
@@ -33,10 +31,6 @@ export const router = createBrowserRouter([
       {
         path: path.teahyeong,
         element: <GuestMain />,
-      },
-      {
-        path: path.wiki,
-        element: <Course />,
       },
       {
         path: path.video,
