@@ -1,8 +1,13 @@
 import React from "react";
 import { Descriptions, Image, Typography } from "antd";
 import dataId from "./GuestInfo.json";
+import styled from "styled-components";
 
 const Course = ({ id }) => {
+  const DivDes = styled.div`
+    margin: 30px 30px;
+  `;
+
   const courseData = dataId.find((item) => item.id === id);
   const imgurl = courseData.image_url;
   const ment = courseData.ment;
@@ -14,7 +19,21 @@ const Course = ({ id }) => {
   const items = [
     {
       label: "사진",
-      children: <Image width={500} src={imgurl} alt={"none"} />,
+      children: (
+        <div style={{ maxWidth: 700 }}>
+          <Image
+            style={{ width: "100%", height: "auto" }}
+            src={imgurl}
+            alt={"none"}
+          />
+        </div>
+      ),
+      span: {
+        xl: 2,
+        xxl: 2,
+        md: 2,
+        lg: 2,
+      },
     },
     {
       label: "별명",
@@ -25,53 +44,33 @@ const Course = ({ id }) => {
       children: courseData.name,
     },
     {
-      label: "나이",
-      children: "",
-    },
-    {
-      label: "직업",
-      span: {
-        xl: 2,
-        xxl: 2,
-      },
-      children: "",
-    },
-    {
-      label: "",
-      span: {
-        xl: 2,
-        xxl: 2,
-      },
-      children: "",
-    },
-    {
       label: "어록",
+      children: <Title level={6}>{ment}</Title>,
       span: {
-        xs: 1,
-        sm: 2,
-        md: 3,
-        lg: 3,
         xl: 2,
         xxl: 2,
+        md: 2,
+        lg: 2,
       },
-      children: <Title level={4}>{ment}</Title>,
     },
   ];
 
   return (
-    <Descriptions
-      title="인물정보"
-      bordered
-      column={{
-        xs: 1,
-        sm: 2,
-        md: 3,
-        lg: 3,
-        xl: 4,
-        xxl: 4,
-      }}
-      items={items}
-    />
+    <DivDes>
+      <Descriptions
+        title=<Title level={6}>인물정보</Title>
+        bordered
+        column={{
+          xs: 1,
+          sm: 1,
+          md: 2,
+          lg: 2,
+          xl: 2,
+          xxl: 2,
+        }}
+        items={items}
+      />
+    </DivDes>
   );
 };
 

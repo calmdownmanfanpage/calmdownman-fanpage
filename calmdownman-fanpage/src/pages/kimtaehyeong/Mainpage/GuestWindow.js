@@ -4,51 +4,65 @@ import data from "./GuestClub.json";
 import Course from "../GuestWiki/Course";
 
 const GuestWindow = () => {
+  const Title = styled.text`
+    @font-face {
+      font-family: "iceJaram-Rg";
+      src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceJaram-Rg.woff2")
+        format("woff2");
+    }
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    font-family: "iceJaram-Rg", sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+  `;
+
+  const DivClub = styled.div`
+    display: inline-flex;
+    justify-content: center;
+    margin: 20px 20px;
+  `;
+
   const ClubSmall = styled.button`
+    font-family: "iceJaram-Rg", sans-serif;
+    font-weight: bold;
     display: inline-flex;
     align-items: center;
     outline: none;
     border: none;
     border-radius: 4px;
     color: white;
-    font-weight: bold;
     cursor: pointer;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 2rem 1rem;
     height: 2.25rem;
-    font-size: 1rem;
+    font-size: 2rem;
     background-color: ${({ selected }) => (selected ? "skyblue" : "blue")};
     &:hover {
       transform: scale(1.4);
       transition: 0.5s;
       background: skyblue;
     }
-    & + & {
-      margin-left: 1rem;
-    }
   `;
 
   const GuestSmall = styled.button`
+    font-family: "iceJaram-Rg", sans-serif;
+    font-weight: bold;
     display: inline-flex;
     align-items: center;
     outline: none;
     border: none;
     border-radius: 4px;
     color: white;
-    font-weight: bold;
     cursor: pointer;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 2rem 1rem;
     height: 2.25rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     background-color: ${({ selected }) => (selected ? "orange" : "red")};
     &:hover {
       transform: scale(1.4);
       transition: 0.5s;
       background: orange;
-    }
-    & + & {
-      margin-left: 1rem;
     }
   `;
 
@@ -100,15 +114,18 @@ const GuestWindow = () => {
 
   return (
     <>
+      <Title>침착맨과 손님들</Title>
       <div>
         {data.map((item) => (
-          <ClubSmall
-            key={item.id}
-            selected={selectedGroup === Object.keys(item)[0]}
-            onClick={() => handleClick(Object.keys(item)[0])}
-          >
-            {Object.keys(item)[0]}
-          </ClubSmall>
+          <DivClub>
+            <ClubSmall
+              key={item.id}
+              selected={selectedGroup === Object.keys(item)[0]}
+              onClick={() => handleClick(Object.keys(item)[0])}
+            >
+              {Object.keys(item)[0]}
+            </ClubSmall>
+          </DivClub>
         ))}
       </div>
 
@@ -121,14 +138,16 @@ const GuestWindow = () => {
                   members.map(
                     (member, i) =>
                       selectedGroup === Object.keys(item)[0] && (
-                        <GuestSmall
-                          key={i}
-                          selected={selectedMember === member}
-                          group={Object.keys(item)[0]}
-                          onClick={() => handleMemberClick(member)}
-                        >
-                          {member}
-                        </GuestSmall>
+                        <DivClub>
+                          <GuestSmall
+                            key={i}
+                            selected={selectedMember === member}
+                            group={Object.keys(item)[0]}
+                            onClick={() => handleMemberClick(member)}
+                          >
+                            {member}
+                          </GuestSmall>
+                        </DivClub>
                       )
                   )
                 )}
