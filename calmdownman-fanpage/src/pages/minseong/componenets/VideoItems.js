@@ -5,11 +5,14 @@ const StyledItemContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
 `;
 
 const StyledItemWrapper = styled.div`
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `;
 
 const StyledThumbnail = styled.div`
@@ -19,13 +22,20 @@ const StyledThumbnail = styled.div`
   border-radius: 20px;
   background-repeat: no-repeat;
   background-size: contain;
+  &:hover {
+    scale: 1.2;
+  }
+  transition: scale 0.3s ease-in-out;
 `;
 
-const StyledLink = styled(Link)``;
+const StyledLink = styled(Link)`
+  cursor: pointer;
+`;
 
 const StyledSpan = styled.span`
-  font-weight: 300;
+  font-weight: 600;
   font-size: 10px;
+  margin-top: 8px;
 `;
 
 const VideoItems = ({ info }) => {
@@ -36,8 +46,8 @@ const VideoItems = ({ info }) => {
           <StyledLink to={`/video/${info.id.videoId}`}>
             <StyledThumbnail thumbnail={info.snippet.thumbnails.default.url} />
           </StyledLink>
-          <StyledSpan>{info.snippet.title}</StyledSpan>
-          <StyledSpan>{info.snippet.publishedAt.split("T")[0]}</StyledSpan>
+          <StyledSpan>◾{info.snippet.title}</StyledSpan>
+          <StyledSpan>🕒{info.snippet.publishedAt.split("T")[0]}</StyledSpan>
         </StyledItemWrapper>
       </StyledItemContainer>
     </>

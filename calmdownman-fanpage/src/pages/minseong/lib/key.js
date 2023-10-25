@@ -3,3 +3,5 @@ export const CHANNEL_ID = "UCUj6rrhMTR9pipbAWBAMvUQ";
 export const BASE_VIDEO_URL = "https://www.googleapis.com/youtube/v3/search?";
 export const BASE_CHANNEL_URL =
   "https://youtube.googleapis.com/youtube/v3/channels?";
+export const BASE_COMMENTS_URL =
+  "https://youtube.googleapis.com/youtube/v3/commentThreads?";

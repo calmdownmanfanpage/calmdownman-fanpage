@@ -16,7 +16,7 @@ const Header = () => {
             <StyledLink to={path.teahyeong}>태형</StyledLink>
             <StyledLink to={path.choonghyun}>충현</StyledLink>
             <StyledLink to={path.soyoun}>Scheduler</StyledLink>
-            <StyledLink to={path.video}>영상</StyledLink>
+            <StyledLink to={path.video}>Youtube</StyledLink>
           </StyledMenuWrapper>
           <StyledMenuButton onClick={handleOpenMenu} />
         </StyledContainer>
@@ -72,7 +72,7 @@ const StyledMenuWrapper = styled.div`
 `;
 
 const StyledImageLink = styled(Link)`
-  background-image: url("icon_home.png");
+  background-image: url("/icon_home.png");
   width: ${HEADER_HEIGHT}px;
   height: ${HEADER_HEIGHT}px;
   padding: 5px;
