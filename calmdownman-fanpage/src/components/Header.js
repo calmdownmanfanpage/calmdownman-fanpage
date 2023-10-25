@@ -13,8 +13,8 @@ const Header = () => {
         <StyledContainer>
           <StyledImageLink to={path.root} />
           <StyledMenuWrapper $isOpened={isOpened}>
-            <StyledLink to={path.teahyeong}>태형</StyledLink>
-            <StyledLink to={path.choonghyun}>그의 작품</StyledLink>
+            <StyledLink to={path.teahyeong}>Guest</StyledLink>
+            <StyledLink to={path.choonghyun}>Webtoon</StyledLink>
             <StyledLink to={path.soyoun}>Scheduler</StyledLink>
             <StyledLink to={path.video}>Youtube</StyledLink>
           </StyledMenuWrapper>
