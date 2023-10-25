@@ -4,7 +4,7 @@ import data from "./GuestClub.json";
 import Course from "../GuestWiki/Course";
 
 const GuestWindow = () => {
-  const Title = styled.text`
+  const Title = styled.h1`
     @font-face {
       font-family: "iceJaram-Rg";
       src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/iceJaram-Rg.woff2")
@@ -65,7 +65,6 @@ const GuestWindow = () => {
       background: orange;
     }
   `;
-
   const [selectedGroup, setSelectedGroup] = useState(null); //선택클럽 추적
   const [selectedMember, setSelectedMember] = useState(null); //선택멤버 추적
   const [activeCourse, setActiveCourse] = useState(null);

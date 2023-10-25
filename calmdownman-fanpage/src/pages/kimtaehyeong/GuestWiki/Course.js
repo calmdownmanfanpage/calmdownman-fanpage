@@ -12,9 +12,6 @@ const Course = ({ id }) => {
   const imgurl = courseData.image_url;
   const ment = courseData.ment;
   const { Title } = Typography;
-  if (!courseData) {
-    return <div>데이터를 찾을 수 없습니다.</div>; // 데이터를 찾을 수 없는 경우 예외 처리
-  }
 
   const items = [
     {
@@ -54,7 +51,6 @@ const Course = ({ id }) => {
       },
     },
   ];
-
   return (
     <DivDes>
       <Descriptions
