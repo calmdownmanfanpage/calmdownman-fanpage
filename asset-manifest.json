@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.4e8848d4.css",
-    "main.js": "/static/js/main.3ed7ff0a.js",
-    "static/media/insta.png": "/static/media/insta.79c59707fc16a2b7a9f8.png",
-    "static/media/youtubeLogo.png": "/static/media/youtubeLogo.c46c12c4acc8d078d835.png",
-    "static/media/bg.png": "/static/media/bg.fa194b9c9b8031277525.png",
-    "static/media/plusLogo.png": "/static/media/plusLogo.24ddbe0598be5b18f74c.png",
-    "static/media/originalLogo.png": "/static/media/originalLogo.8606507f069949028a31.png",
-    "static/media/cafeLogo.svg": "/static/media/cafeLogo.2ea57ffa129dc41ff626596e9c3b6a40.svg",
-    "index.html": "/index.html",
-    "main.4e8848d4.css.map": "/static/css/main.4e8848d4.css.map",
-    "main.3ed7ff0a.js.map": "/static/js/main.3ed7ff0a.js.map"
+    "main.css": "/calmdownman-fanpage/static/css/main.4e8848d4.css",
+    "main.js": "/calmdownman-fanpage/static/js/main.addc10dc.js",
+    "static/media/insta.png": "/calmdownman-fanpage/static/media/insta.79c59707fc16a2b7a9f8.png",
+    "static/media/youtubeLogo.png": "/calmdownman-fanpage/static/media/youtubeLogo.c46c12c4acc8d078d835.png",
+    "static/media/bg.png": "/calmdownman-fanpage/static/media/bg.fa194b9c9b8031277525.png",
+    "static/media/plusLogo.png": "/calmdownman-fanpage/static/media/plusLogo.24ddbe0598be5b18f74c.png",
+    "static/media/originalLogo.png": "/calmdownman-fanpage/static/media/originalLogo.8606507f069949028a31.png",
+    "static/media/cafeLogo.svg": "/calmdownman-fanpage/static/media/cafeLogo.2ea57ffa129dc41ff626596e9c3b6a40.svg",
+    "index.html": "/calmdownman-fanpage/index.html",
+    "main.4e8848d4.css.map": "/calmdownman-fanpage/static/css/main.4e8848d4.css.map",
+    "main.addc10dc.js.map": "/calmdownman-fanpage/static/js/main.addc10dc.js.map"
   },
   "entrypoints": [
     "static/css/main.4e8848d4.css",
-    "static/js/main.3ed7ff0a.js"
+    "static/js/main.addc10dc.js"
   ]
 }
