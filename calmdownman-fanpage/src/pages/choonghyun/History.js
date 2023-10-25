@@ -1,20 +1,16 @@
-
-// import ReactDOM from 'react-dom/client';
 import styled from 'styled-components';
 import Swip from './Swip';
 import "./fonts/Font.css";
 
-// const rootNode = document.getElementById('root');
-// ReactDOM.createRoot(rootNode).render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-// );
+
 const History = () => {
     return (
       <>
+      
       <font/>
-      <Title>침착맨의 작품들</Title>
+      
+      <Title>침착맨의 작품</Title>
+      
       <Backcolor>
       <Swip/>
       </Backcolor>
@@ -30,6 +26,8 @@ const History = () => {
   text-align: center;
   color: palevioletred;
   font-family: 'iceJaram-Rg';
+  margin : 40px;
+
 `;
  
 
@@ -54,11 +52,11 @@ const Backcolor = styled.div`
   background-color: rgb(118, 163, 12);
 }
 
-#app { height: 100% }
+#app { height: 80% }
 html,
 body {
   position: relative;
-  height: 100%;
+  height: 80%;
 }
 
 body {
@@ -70,14 +68,6 @@ body {
   padding: 0;
 }
 
-body {
-  background: #fff;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  color: #000;
-  margin: 20px;
-  padding: 20px;
-}
 
 html,
 body {
@@ -92,8 +82,8 @@ body {
 }
 
 .swiper {
-  width: 580px;
-  height: 650px;
+  width: 620px;
+  height: 720px;
 }
 
 .swiper-slide {
