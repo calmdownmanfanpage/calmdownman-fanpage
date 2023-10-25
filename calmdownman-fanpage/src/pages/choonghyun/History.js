@@ -14,6 +14,8 @@ const History = () => {
       <Backcolor>
       <Swip/>
       </Backcolor>
+      
+
         
         
         
@@ -29,6 +31,8 @@ const History = () => {
   margin : 40px;
 
 `;
+
+
  
 
 const Backcolor = styled.div`
@@ -82,7 +86,7 @@ body {
 }
 
 .swiper {
-  width: 620px;
+  width: 580px;
   height: 720px;
 }
 
@@ -90,7 +94,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 20px;
+  border-radius: 50px;
   font-size: 22px;
   font-weight: bold;
   color: #fff;
