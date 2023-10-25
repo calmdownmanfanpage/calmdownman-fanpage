@@ -1,4 +1,4 @@
-#app { height: 100% }
+/* #app { height: 100% }
 html,
 body {
   position: relative;
@@ -48,9 +48,9 @@ body {
   font-size: 22px;
   font-weight: bold;
   color: #fff;
-}
+} */
 
-.swiper-slide:nth-child(1n) {
+/* .swiper-slide:nth-child(1n) {
   background-color: rgb(206, 17, 17);
 }
 
@@ -68,5 +68,5 @@ body {
 
 .swiper-slide:nth-child(5n) {
   background-color: rgb(118, 163, 12);
-}
+} */
 
