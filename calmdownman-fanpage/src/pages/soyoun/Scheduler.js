@@ -1,10 +1,8 @@
+
 import styled, { css } from "styled-components";
 import Bg from "./img/bg.png";
-import Insta from "./img/insta.png";
-import Twitch from "./img/twitch.png";
-import Youtube from "./img/youtube.png";
-import Mail from "./img/mail.png";
 import Calendar from "./Calendar";
+import Linklist from "./Linklist";
 
 const Scheduler = () => {
   return (
@@ -19,64 +17,9 @@ const Scheduler = () => {
             <Calendar />
           </CalendarArea>
           <InfoArea>
-            <Linklist>
-              <ul>
-                <li>
-                    침착맨 생방송
-                    <div>
-                        <img
-                            src={Twitch}
-                            alt="유튜브로고"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={Youtube}
-                            alt="유튜브로고"
-                        />
-                    </div>
-                </li>
-                <li>
-                    침착맨 유튜브
-                    <div>
-                        <img
-                            src={Youtube}
-                            alt="유튜브로고"
-                        />
-                    </div>
-                    <div>
-                        <img
-                            src={Youtube}
-                            alt="유튜브로고"
-                        />
-                    </div>
-                </li>
-                <li>
-                    침착맨 인스타
-                    <div>
-                        <img
-                            src={Insta}
-                            alt="유튜브로고"
-                        />
-                    </div>
-                </li>
-                <li>
-                    비즈니스 문의
-                    <div>
-                        <img
-                            src={Mail}
-                            alt="유튜브로고"
-                        />
-                    </div>
-                </li>
-              </ul>
-            </Linklist>
+              <Linklist></Linklist>
           </InfoArea>
         </Container>
-        {/* 
-            <Footer>
-
-            </Footer> */}
       </Wrapper>
     </>
   );
@@ -127,34 +70,7 @@ const InfoArea = styled.div`
   }
 `;
 
-const Linklist = styled.div`
-    ul{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        @media screen and (min-width: 834px) {
-            flex-direction: column;
-        }
 
-    } 
-    li{
-        font-size: 30px;
-        font-family: Yeon Sung;
-        width: 50%;
-        padding: 10px 10px;
-        @media screen and (min-width: 834px) {
-            width: 100%;
-            
-        }
-    }
-    div{
-        display: inline-block;
-        width: 50px;
-    }
-    img{
-        width: 100%;
-    }
-`;
 
 
 export default Scheduler;
