@@ -5,6 +5,7 @@ import Scheduler from "./soyoun/Scheduler";
 import GuestMain from "./kimtaehyeong/GuestMain";
 import Video from "./minseong/pages/Video";
 import VideoItem from "./minseong/componenets/VideoItem";
+import History from "./choonghyun/History";
 
 export const path = {
   root: "/",
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
       {
         path: path.videoItem,
         element: <VideoItem />,
+      },
+      {
+        path: path.choonghyun,
+        element: <History />,
       },
     ],
   },
