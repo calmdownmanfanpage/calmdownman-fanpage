@@ -20,10 +20,6 @@ const Scheduler = () => {
               <Linklist></Linklist>
           </InfoArea>
         </Container>
-        {/* 
-            <Footer>
-
-            </Footer> */}
       </Wrapper>
     </>
   );

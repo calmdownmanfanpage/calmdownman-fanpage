@@ -1,122 +1,105 @@
-import styled, { css } from "styled-components";
-import FullCalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
+import React from 'react'
+import { formatDate } from '@fullcalendar/core'
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
+import timeGridPlugin from '@fullcalendar/timegrid'
+import interactionPlugin from '@fullcalendar/interaction'
+import { INITIAL_EVENTS, createEventId } from './event-utils'
 
-const events = [{ title: "Meeting", start: new Date() }];
+class Calendar extends React.Component {
 
-function Calendar() {
-  return (
-    <>
-      <StyledFullcalendarContainer>
+  state = {
+    weekendsVisible: true,
+    currentEvents: []
+  }
+
+  render() {
+    return (
+      <div className='demo-app'>
+        <div className='demo-app-main'>
           <FullCalendar
-            plugins={[dayGridPlugin]}
-            initialView="dayGridMonth"
+            plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+            headerToolbar={{
+              left: 'prev,next today',
+              center: 'title',
+              right: 'dayGridMonth,timeGridWeek,timeGridDay'
+            }}
+            initialView='dayGridMonth'
+            locale={"ko"}
+            editable={true}
+            selectable={true}
+            selectMirror={true}
+            dayMaxEvents={true}
             weekends={true}
-            locale={'ko'}
-            headerToolbar={
-                {
-                  start: 'today', 
-                  center: 'title',
-                  end: 'prev,next' 
-              }
-            }
-            events={[
-            { 
-              title: "2주차 불침번", 
-              date: "2023-10-13"
-            },
-            {
-              title: "3주차 불침번",
-              date: "2023-10-16" 
-            },
+            initialEvents={INITIAL_EVENTS} // alternatively, use the `events` setting to fetch from a feed
+            select={this.handleDateSelect}
+            eventContent={renderEventContent} // custom render function
+            eventClick={this.handleEventClick}
+            eventsSet={this.handleEvents} // called after events are initialized/added/changed/removed
             
-          ]}
-            eventContent={renderEventContent}
+            eventAdd={function(){
+
+            }}
+            eventChange={function(){}}
+            eventRemove={function(){}}
+            
           />
-      </StyledFullcalendarContainer>
-    </>
-  );
+        </div>
+      </div>
+    )
+  }
+
+  
+  handleDateSelect = (selectInfo) => {
+    let title = prompt('Please enter a new title for your event');
+    let calendarApi = selectInfo.view.calendar;
+
+    calendarApi.unselect() // clear date selection
+
+    if (title) {
+      calendarApi.addEvent({
+        id: createEventId(),
+        title,
+        start: selectInfo.startStr,
+        end: selectInfo.endStr,
+        allDay: selectInfo.allDay
+      })
+
+      return INITIAL_EVENTS.push(calendarApi);
+    }
+  }
+
+  handleEventClick = (clickInfo) => {
+    if (alert(`Are you sure you want to delete the event '${clickInfo.event.title}'`)) {
+      clickInfo.event.remove()
+    }
+  }
+
+  handleEvents = (events) => {
+    this.setState({
+      currentEvents: events
+    })
+  }
+
 }
 
-//Styled Component
-const StyledFullcalendarContainer = styled.div`
-  // toolbar container
-  .fc .fc-toolbar.fc-header-toolbar {
-    margin: 0;
-    padding: 0 40px;
-    background-color: #356eff;
-    height: 63px;
-    font-weight: 600;
-    font-size: 12px;
-    line-height: 29px;
-    color: white;
-    border-radius: 20px 20px 0px 0px;
-  }
+export default Calendar;
 
-  // toolbar 버튼
-  .fc .fc-button-primary {
-    background-color: transparent;
-    border: none;
-
-    span {
-      font-weight: 500;
-      font-size: 28px;
-    }
-
-    :hover {
-      background-color: transparent;
-    }
-  }
-
-  // 요일 부분
-  .fc-theme-standard th {
-    height: 32px;
-    padding-top: 3.5px;
-    background: #e5edff;
-    border: 1px solid #dddee0;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 19px;
-    color: #7b7b7b;
-  }
-
-  // 오늘 날짜 배경색
-  .fc .fc-daygrid-day.fc-day-today {
-    background-color: #fff8bd;
-    color: #356eff;
-  }
-
-  // 날짜별 그리드
-  .fc .fc-daygrid-day-frame {
-    padding: 10px;
-  }
-
-  // 날짜  ex) 2일
-  .fc .fc-daygrid-day-top {
-    flex-direction: row;
-    margin-bottom: 3px;
-  }
-
-  // 각 이벤트 요소
-  .fc-event {
-    cursor: pointer;
-    padding: 5px 8px;
-    margin-bottom: 5px;
-    border-radius: 4px;
-    font-weight: 500;
-    font-size: 14px;
-  }
-
-`;
-
-// a custom render function
 function renderEventContent(eventInfo) {
   return (
     <>
       <b>{eventInfo.timeText}</b>
       <i>{eventInfo.event.title}</i>
     </>
-  );
+  )
 }
 
-export default Calendar;
+function renderSidebarEvent(event) {
+  return (
+    <li key={event.id}>
+      <b>{formatDate(event.start, {year: 'numeric', month: 'short', day: 'numeric'})}</b>
+      <i>{event.title}</i>
+    </li>
+  )
+}
+
